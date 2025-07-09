@@ -36,14 +36,14 @@ venv\Scripts\activate    # On Windows
 pip install -r requirements.txt
 ```
 
-###🚀 Usage
+### 🚀 Usage
 Run the application with:
 ```bash
 python main.py
 ```
 ##Press Ctrl+C or Esc to exit the application window.
 
-##🧠 How it Works
+## 🧠 How it Works
 - Uses MediaPipe Hands to track hand landmarks
 - Tracks the Y-position of key fingers to detect the middle finger only
 - Applies Gaussian blur over the region of the finger
