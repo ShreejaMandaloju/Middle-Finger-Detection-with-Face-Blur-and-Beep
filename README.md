@@ -41,7 +41,7 @@ Run the application with:
 ```bash
 python main.py
 ```
-##Press Ctrl+C or Esc to exit the application window.
+## Press ***Ctrl+C or Esc*** to exit the application window.
 
 ## 🧠 How it Works
 - Uses MediaPipe Hands to track hand landmarks
