@@ -1,40 +1,52 @@
-# FingerSense
+# 🖐️ FingerSense: Middle Finger & Face Blur Detection with Beep
 
-FingerSense is a real-time webcam filter that detects when the middle finger is shown and automatically applies a Gaussian blur to censor it. It leverages OpenCV and MediaPipe for accurate hand tracking, combined with a gesture history voting system to reduce flicker and ensure smooth, reliable detection.
+FingerSense is a fun and privacy-focused computer vision tool that detects when someone shows the middle finger in front of a webcam — and censors it **with a blur and a beep**!  
+Additionally, it blurs **faces** to protect identities in real time.
 
-## Features
+---
 
-- Real-time middle finger detection using MediaPipe hand tracking  
-- Automatic Gaussian blur applied to censor the middle finger gesture  
-- Gesture history voting system to stabilize detection and minimize flicker  
-- Handles hand disappearance gracefully to prevent crashes  
+## ✨ Features
 
-## Installation
+- ✅ **Real-time middle finger detection** using MediaPipe
+- 🧠 Smart **gesture voting system** to reduce flickering
+- 🔊 **Beep sound alert** when middle finger is detected
+- 🧍 **Automatic face blur** using Haar Cascades (OpenCV)
+- 🔒 Keeps users’ faces private along with gesture moderation
+- 🖥️ Simple UI with OpenCV preview window
+- 💻 Lightweight & easy to run on most systems
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/FingerSense.git
-    cd FingerSense
-    ````
+---
 
-2. Install dependencies:
+## 📦 Installation
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+**1. Clone the repo**
+```bash
+git clone https://github.com/ShreejaMandaloju/Middle-Finger-Detection-with-Face-Blur-and-Beep.git
+cd Middle-Finger-Detection-with-Face-Blur-and-Beep
+```
+**2. Create a virtual environment** (optional but recommended)
 
-## Usage
+```bash
+python -m venv venv
+venv\Scripts\activate    # On Windows
+```
 
-Run the main script to start the webcam filter:
+**3. Install the dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-  ```bash
-python finger_sense.py
-  ```
+###🚀 Usage
+Run the application with:
+```bash
+python main.py
+```
+##Press Ctrl+C or Esc to exit the application window.
 
-Show your middle finger to see it blurred in real-time!
+##🧠 How it Works
+- Uses MediaPipe Hands to track hand landmarks
+- Tracks the Y-position of key fingers to detect the middle finger only
+- Applies Gaussian blur over the region of the finger
+- Uses OpenCV Haar cascade to detect and blur faces
+- Plays a beep sound when the middle finger is detected
 
-## Requirements
-
-* Python 3.7+
-* OpenCV (opencv-python==4.10.0.82)
-* MediaPipe (mediapipe==0.10.21)
